@@ -19,13 +19,13 @@ class PhotoGalleryPage extends StatelessWidget {
       body: Consumer<PhotoProvider>(
         builder: (context, model, child) {
           if (model.isLoading) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (model.hasError) {
-            return Center(child: Text('Failed to fetch photos'));
+            return const Center(child: Text('Failed to fetch photos'));
           } else {
             return GridView.builder(
               itemCount: model.photos.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 4,
                 mainAxisSpacing: 4,
