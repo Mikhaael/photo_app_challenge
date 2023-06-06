@@ -14,7 +14,7 @@ class PhotoGalleryPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Photo Gallery'),
+        title: Text('Photo Galler'),
       ),
       body: Consumer<PhotoProvider>(
         builder: (context, model, child) {
