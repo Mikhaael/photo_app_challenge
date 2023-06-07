@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_app_challenge/src/constants/global_variables.dart';
 import 'package:photo_app_challenge/src/features/address/data/models/photo_model.dart';
@@ -15,7 +16,7 @@ class PhotoChallengeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => PhotoProvider(),
+      create: (_) => PhotoProvider(PhotoProviderData(Dio())),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Photo Gallery',
