@@ -6,6 +6,11 @@ import 'package:flutter/material.dart';
 import '../models/photo_model.dart';
 import 'package:http/http.dart' as http;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 class PhotoGalleryModel extends ChangeNotifier {
   final ApiClient apiClient;
 
@@ -29,7 +34,11 @@ class PhotoGalleryModel extends ChangeNotifier {
 class ApiClient {
   final String apiUrl;
 
+<<<<<<< HEAD
   ApiClient({this.apiUrl = 'https://api.unsplash.com/photos?page=1&per_page=10&client_id=y9e1_8pgcqRoWYgMCd4OsfNBEV9Uh9YrsBcFHxdJAU8'});
+=======
+  ApiClient({this.apiUrl = 'https://api.example.com'});
+>>>>>>> origin/master
 
   Future<List<Photo>> fetchPhotos() async {
     final response = await http.get(Uri.parse('$apiUrl/photos'));
