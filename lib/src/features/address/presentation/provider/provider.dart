@@ -58,7 +58,6 @@ class PhotoProviderData {
 
   Future<void> fetchPhotos() async {
     if (_isLoading) return;
-
     _isLoading = true;
     try {
       final response = await _dio.get('$apiUrl&page=$_page');

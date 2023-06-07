@@ -8,6 +8,8 @@ import '../../data/models/photo_model.dart';
 import '../provider/provider.dart';
 
 class PhotoGalleryPage extends StatefulWidget {
+  const PhotoGalleryPage({super.key});
+
   @override
   _PhotoGalleryPageState createState() => _PhotoGalleryPageState();
 }
@@ -48,9 +50,9 @@ class _PhotoGalleryPageState extends State<PhotoGalleryPage> {
       body: Consumer<PhotoProvider>(
         builder: (context, model, child) {
           if (model.isLoading && model.page == 1) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (model.hasError && model.page == 1) {
-            return Center(child: Text('Failed to fetch photos'));
+            return const Center(child: Text('Failed to fetch photos'));
           } else {
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -90,9 +92,9 @@ class _PhotoGalleryPageState extends State<PhotoGalleryPage> {
                     ),
                   );
                 } else if (model.hasMorePages) {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 } else {
-                  return SizedBox();
+                  return const SizedBox();
                 }
               },
             );
