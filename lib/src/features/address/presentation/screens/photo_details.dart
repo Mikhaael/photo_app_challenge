@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:photo_app_challenge/src/utils/designs/dimens.dart';
 
 import '../../../../utils/designs/photo_theme.dart';
 import '../../data/models/photo_model.dart';
 
+const double space = 18;
+
 class PhotoDetailsPage extends StatelessWidget {
   final Photo photo;
 
-  PhotoDetailsPage(this.photo);
+  const PhotoDetailsPage(this.photo, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class PhotoDetailsPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -38,12 +41,12 @@ class PhotoDetailsPage extends StatelessWidget {
                     photo.title,
                     style: PhotoTheme.lightTextTheme.bodyLarge,
                   ),
-                  SizedBox(height: 8),
+                  vSpace(space / 2),
                   Text(
                     'By ${photo.authorName}',
                       style: PhotoTheme.lightTextTheme.bodyLarge,
                   ),
-                  SizedBox(height: 8),
+                  vSpace(space / 2),
                   Text(
                     photo.description,
                     style: PhotoTheme.lightTextTheme.displaySmall,

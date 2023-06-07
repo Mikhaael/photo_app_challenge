@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:photo_app_challenge/src/features/address/presentation/screens/photo_details.dart';
-import 'package:photo_app_challenge/src/features/address/presentation/screens/photo_screen.dart';
 
 import '../features/address/presentation/screens/homepage.dart';
 

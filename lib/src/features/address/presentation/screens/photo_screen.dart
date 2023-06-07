@@ -4,10 +4,11 @@ import 'package:photo_app_challenge/src/features/address/presentation/screens/ph
 import 'package:provider/provider.dart';
 
 import '../../../../utils/designs/photo_theme.dart';
-import '../../data/models/photo_model.dart';
 import '../provider/provider.dart';
 
 class PhotoGalleryPage extends StatefulWidget {
+  const PhotoGalleryPage({super.key});
+
   @override
   _PhotoGalleryPageState createState() => _PhotoGalleryPageState();
 }
@@ -48,9 +49,9 @@ class _PhotoGalleryPageState extends State<PhotoGalleryPage> {
       body: Consumer<PhotoProvider>(
         builder: (context, model, child) {
           if (model.isLoading && model.page == 1) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (model.hasError && model.page == 1) {
-            return Center(child: Text('Failed to fetch photos'));
+            return const Center(child: Text('Failed to fetch photos'));
           } else {
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -82,17 +83,24 @@ class _PhotoGalleryPageState extends State<PhotoGalleryPage> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        child: Image.network(
-                          photo.imageUrl,
+                        child: CachedNetworkImage(
                           fit: BoxFit.cover,
+                          imageUrl: photo.imageUrl,
+                          placeholder: (context, url) => const Center(
+                            child:  CircularProgressIndicator(
+                              strokeWidth: 3,
+                              color: Colors.black,
+                            ),
+                          ),
+                          errorWidget: (context, url, error) => const Icon(Icons.error),
                         ),
                       ),
                     ),
                   );
                 } else if (model.hasMorePages) {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 } else {
-                  return SizedBox();
+                  return const SizedBox();
                 }
               },
             );

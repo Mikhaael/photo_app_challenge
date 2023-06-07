@@ -1,10 +1,8 @@
-import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
-import '../../../../../api_key.dart';
 import '../../data/models/photo_model.dart';
 
 class PhotoProvider extends ChangeNotifier {
@@ -58,7 +56,6 @@ class PhotoProviderData {
 
   Future<void> fetchPhotos() async {
     if (_isLoading) return;
-
     _isLoading = true;
     try {
       final response = await _dio.get('$apiUrl&page=$_page');
