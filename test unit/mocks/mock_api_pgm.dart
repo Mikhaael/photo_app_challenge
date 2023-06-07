@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../models/photo_model.dart';
+import 'package:photo_app_challenge/src/features/address/data/models/photo_model.dart';
 import 'package:http/http.dart' as http;
 
 

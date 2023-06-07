@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:photo_app_challenge/src/features/address/data/datasources/mock_api_pg.dart';
+import 'mocks/mock_api_pg.dart';
 
 
 void main() {
