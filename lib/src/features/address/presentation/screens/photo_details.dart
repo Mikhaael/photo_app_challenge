@@ -30,7 +30,7 @@ class PhotoDetailsPage extends StatelessWidget {
               children: [
                 Text(
                   photo.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import '../../data/models/photo_model.dart';
 
 class PhotoProvider extends ChangeNotifier {
-  final String apiUrl =
+  String apiUrl =
       'https://api.unsplash.com/photos?page=1&per_page=10&client_id=y9e1_8pgcqRoWYgMCd4OsfNBEV9Uh9YrsBcFHxdJAU8';
 
   final Dio _dio = Dio();
@@ -53,4 +53,3 @@ class PhotoProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-

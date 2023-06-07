@@ -7,7 +7,6 @@ import 'package:photo_app_challenge/src/features/address/presentation/screens/ph
 import 'package:photo_app_challenge/src/routing/routing.dart';
 import 'package:provider/provider.dart';
 
-
 void main() {
   runApp(PhotoChallengeApp());
 }
@@ -38,5 +37,3 @@ class PhotoChallengeApp extends StatelessWidget {
     );
   }
 }
-
-
