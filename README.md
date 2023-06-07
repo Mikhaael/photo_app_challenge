@@ -1,4 +1,4 @@
-# photo_app_challenge
+# Photo Gallery App
 
 This is a simple mobile application built with Flutter that allows users to browse and view a list of photos fetched from an API. It provides features such as displaying a grid view of photos, pagination to load more photos, and the ability to view photos in full screen with additional details.
 
@@ -23,11 +23,11 @@ This command will run all the tests located in the test directory and display th
 ## Architecture and Folder Structure
 The application follows a modular structure and separates concerns into different directories. Here's a brief overview of the folder structure:
 
-lib: Contains the main source code of the application.
-  data: Handles data-related operations, such as API calls and data models.
-  presentation: Contains the UI components and state management.
-  utils: Includes utility classes and helper functions.
-  test unit: Contains the unit tests for the selected features and components of application.
+- lib: Contains the main source code of the application.
+  - data: Handles data-related operations, such as API calls and data models.
+  - presentation: Contains the UI components and state management.
+  - utils: Includes utility classes and helper functions.
+  - test unit: Contains the unit tests for the selected features and components of application.
   
  ## Contributing
 Contributions to the Photo Gallery app are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
