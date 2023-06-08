@@ -17,7 +17,7 @@ To get started with the Photo Gallery app, follow these steps:
 This command will launch the app on an available emulator or connected device.
 
 ## Running Tests
-   flutter test unit
+    flutter test unit
 This command will run all the tests located in the test directory and display the test results in the console.
 
 ## Architecture and Folder Structure
